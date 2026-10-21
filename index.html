@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de perfil de eleitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section id="screen-start" class="screen active">
+      <p class="eyebrow">Quiz de perfil</p>
+      <h1>Qual eleitor é você?</h1>
+      <p class="lead">
+        Responda às perguntas e descubra com qual candidato —
+        <strong>Lula</strong> ou <strong>Flávio Bolsonaro</strong> —
+        o seu perfil se identifica mais.
+      </p>
+      <p class="meta" id="start-meta"></p>
+      <button type="button" id="btn-start" class="btn btn-primary">Começar</button>
+      <p class="disclaimer">Conteúdo informal, sem valor de pesquisa eleitoral.</p>
+    </section>
+
+    <section id="screen-quiz" class="screen">
+      <header class="quiz-header">
+        <div class="progress" role="progressbar" aria-label="Progresso do quiz" aria-valuemin="0" aria-valuemax="100" id="progress">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="counter" id="counter"></p>
+      </header>
+
+      <h2 class="question" id="question-text"></h2>
+      <div class="options" id="options"></div>
+
+      <div class="quiz-actions">
+        <button type="button" id="btn-back" class="btn btn-ghost">Voltar</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="screen">
+      <p class="eyebrow">Resultado</p>
+      <h1 id="result-title"></h1>
+      <p class="lead" id="result-message"></p>
+      <div class="scores" id="scores"></div>
+      <button type="button" id="btn-restart" class="btn btn-primary">Refazer o quiz</button>
+      <p class="disclaimer">Conteúdo informal, sem valor de pesquisa eleitoral.</p>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
